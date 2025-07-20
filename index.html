@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta -->
+<meta name="title" content="Weather App – Real-Time Forecast | Task 5">
+<meta name="description" content="A responsive weather app with real-time weather updates and 5-day forecast. Search by city or use your current location. Built with HTML, CSS & JavaScript.">
+<meta name="keywords" content="weather app, JavaScript weather, openweathermap API, real-time forecast, responsive design, weather project, prodigy internship">
+<meta name="author" content="Jamuna Rani">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jamuna1221.github.io/weather-app/">
+<meta property="og:title" content="Weather App – Real-Time Forecast | Task 5">
+<meta property="og:description" content="Get accurate weather updates and forecasts with this responsive web app.">
+<meta property="og:image" content="https://jamuna1221.github.io/weather-app/assets/weather-preview.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://jamuna1221.github.io/weather-app/">
+<meta name="twitter:title" content="Weather App – Real-Time Forecast | Task 5">
+<meta name="twitter:description" content="Search weather by city or current location. Built with HTML, CSS & JS.">
+<meta name="twitter:image" content="https://jamuna1221.github.io/weather-app/assets/weather-preview.png">
+
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        
+        <div class="search-container">
+            <input type="text" id="locationInput" placeholder="Enter city name..." />
+            <button id="searchBtn">Search</button>
+            <button id="locationBtn">Use My Location</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+
+        <div id="error" class="error hidden">
+            <p>Unable to fetch weather data. Please try again.</p>
+        </div>
+
+        <div id="weatherData" class="weather-data hidden">
+            <div class="location-info">
+                <h2 id="locationName"></h2>
+                <p id="currentTime"></p>
+            </div>
+
+            <div class="current-weather">
+                <div class="temperature">
+                    <span id="temp"></span>
+                    <span class="unit">°C</span>
+                </div>
+                <div class="weather-icon">
+                    <img id="weatherIcon" src="" alt="Weather Icon" />
+                </div>
+                <div class="weather-description">
+                    <p id="description"></p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="label">Feels like</span>
+                    <span id="feelsLike"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Humidity</span>
+                    <span id="humidity"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Wind Speed</span>
+                    <span id="windSpeed"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Pressure</span>
+                    <span id="pressure"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Visibility</span>
+                    <span id="visibility"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">UV Index</span>
+                    <span id="uvIndex"></span>
+                </div>
+            </div>
+
+            <div class="forecast-container">
+                <h3>5-Day Forecast</h3>
+                <div id="forecast" class="forecast"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
